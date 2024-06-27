@@ -32,25 +32,38 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::docker
-# zinit snippet OMZP::docker-compose
-zinit snippet OMZP::nvm
+if [[ -f "$(which git)" ]] then
+  zinit snippet OMZP::git
+fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-zinit snippet OMZP::pyenv
+if [[ -f "$(which docker)" ]] then
+  zinit snippet OMZP::docker
+  # zinit snippet OMZP::docker-compose
+fi
 
-zinit snippet OMZP::aws
+if [[ -f "$(which nvm)" ]] then
+ zinit snippet OMZP::nvm
+fi
+
+if [[ -f "$(which pyenv)" ]] then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+  zinit snippet OMZP::pyenv
+fi
+
+if [[ -f "$(which aws)" ]] then
+  zinit snippet OMZP::aws
+  alias awslocal="aws --endpoint-url=http://localhost:4566"
+  alias sts="aws sts get-caller-identity"
+fi
+
 # zinit snippet OMZP::kubectl
 # zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-# autoload bashcompinit && bashcompinit
 fpath+=${HOME}/.cache/zinit/completions
 autoload -Uz compinit && compinit
-# complete -C aws_completer aws
 
 zinit cdreplay -q
 
@@ -88,8 +101,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Aliases
 alias ls='ls --color'
-alias awslocal="aws --endpoint-url=http://localhost:4566"
-alias sts="aws sts get-caller-identity"
 
 # Shell integrations
 eval "$(fzf --zsh)"

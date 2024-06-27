@@ -4,7 +4,14 @@ Repo for housing my dotfiles.
 
 ## Dependencies
 
+### General
+
 - [Gnu stow](https://www.gnu.org/software/stow/)
+
+### ZSH
+
+- fzf
+- zoxide
 
 ## Usage
 
