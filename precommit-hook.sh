@@ -1,8 +1,10 @@
 #!/bin/sh
 
-set -xe
+set -e
 cd "$(dirname "$0")/../.."
 
-code --list-extensions | sort > ./code_extensions/extensions.txt
-
-git add ./code_extensions/extensions.txt
+if [ -f "$(which code)" ]; then
+	set -x
+	code --list-extensions | sort > ./code_extensions/extensions.txt
+	git add ./code_extensions/extensions.txt
+fi

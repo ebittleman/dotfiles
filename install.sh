@@ -18,8 +18,10 @@ stow -v --target=${HOME} --restow p10k
 stow -v --target=${HOME} --restow zsh
 stow -v --target="${CODE_TARGET}/Code/User" --restow code
 
+if [ -f "$(which code)" ]; then
 chmod +x code_extensions/install_extensions.sh
 code_extensions/install_extensions.sh
+fi
 
 chmod +x precommit-hook.sh
 mkdir -p .git/hooks
