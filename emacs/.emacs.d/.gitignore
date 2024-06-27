@@ -1,0 +1,15 @@
+/.cache/
+/eln-cache/
+/elpa/
+/history
+/transient/
+/auto-save-list/
+/eshell/
+/projects
+emacs-backup
+server
+tree-sitter/
+session.*
+irony/
+.lsp-session*
+screenshots/*
