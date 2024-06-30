@@ -13,3 +13,4 @@ session.*
 irony/
 .lsp-session*
 screenshots/*
+tramp
