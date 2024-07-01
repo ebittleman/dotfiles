@@ -5,11 +5,9 @@ set -e
 cd "$(dirname "$0")"
 
 CACHE_DIR=${XDG_CACHE_HOME:-$HOME/.cache}
-if [ "$OSTYPE" == "linux-gnu" ]; then
+if [[ "$OSTYPE" == "linux"* ]]; then
     CODE_TARGET="${CACHE_DIR}"
-elif [ "$OSTYPE" == "linux-musl" ]; then
-    CODE_TARGET="${CACHE_DIR}"
-elif [ "$OSTYPE" == "darwin"* ]; then
+elif [[ "$OSTYPE" == "darwin"* ]]; then
     CODE_TARGET="${HOME}/Library/Application Support"
 else
 	echo "Unsupported OS: ${OSTYPE}"
