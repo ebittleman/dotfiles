@@ -36,7 +36,8 @@ if [[ -f "$(which docker)" ]] then
   # zinit snippet OMZP::docker-compose
 fi
 
-if [[ -f "$(which nvm)" ]] then
+NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+if [[ -d "${NVM_DIR}" ]] then
  zinit snippet OMZP::nvm
 fi
 
