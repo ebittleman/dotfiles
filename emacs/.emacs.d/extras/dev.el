@@ -91,6 +91,17 @@
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
   (setq lsp-headerline-breadcrumb-enable nil)
+  (setq lsp-semgrep-languages
+	'("apex" "bash" "sh"
+	  ;; c cpp c++
+	  "cairo"
+	  "clojure" "csharp"
+	  "c#" "dart" "dockerfile" "docker" "ex" "elixir" "go"
+	  "golang" "hack" "html" "java" "js" "javascript" "json"
+	  "jsonnet" "julia" "kt" "kotlin" "lisp" "lua" "ocaml" "php"
+	  "python2" "python3" "py" "python" "r" "regex" "none" "ruby"
+	  "rust" "scala" "scheme" "solidity" "sol" "swift" "tf" "hcl"
+	  "terraform" "ts" "typescript" "vue" "xml" "yaml"))
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
          (c-mode . lsp)
          (c++-mode . lsp)
@@ -100,7 +111,7 @@
 
 (use-package cc-mode
   :bind (:map c-mode-map
-	 ("C-d" . mc/mark-next-like-this)))
+	      ("C-d" . mc/mark-next-like-this)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;;   Eglot, the built-in LSP client for Emacs
@@ -128,8 +139,8 @@
   :config
   (fset #'jsonrpc--log-event #'ignore)  ; massive perf boost---don't log every event
   ;; Sometimes you need to tell Eglot where to find the language server
-  ; (add-to-list 'eglot-server-programs
-  ;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
+					; (add-to-list 'eglot-server-programs
+					;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
   (add-to-list 'eglot-server-programs
                '(python-ts-mode . ("pylsp")))
   )
