@@ -392,5 +392,6 @@
     "editor.defaultFormatter": "ms-ossdata.vscode-postgresql"
   },
   "github.copilot.editor.enableAutoCompletions": true,
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "telemetry.telemetryLevel": "off"
 }

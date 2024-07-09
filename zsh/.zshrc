@@ -71,6 +71,12 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# load editor
+export EDITOR=vim
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 # Key Bindings
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
