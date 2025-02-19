@@ -110,7 +110,14 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 alias ls='ls --color'
 
 # Shell integrations
-eval "$(fzf --zsh)"
+
+if [ -d "/usr/share/doc/fzf/examples" ]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+else
+  eval "$(fzf --zsh)"
+fi
+
 eval "$(zoxide init --cmd cd zsh)"
 
 src () {set -a; . $1; set +a}
