@@ -111,15 +111,15 @@ alias ls='ls --color'
 
 # Shell integrations
 
-
-{
-  eval "$(fzf --zsh)" 2>&1 > /dev/null
-} || {
+fzf_eval=$(fzf --zsh 2>/dev/null)
+if [ $? -eq 0 ]; then
+  eval $fzf_eval
+else
   if [ -f "/usr/share/doc/fzf/examples/key-bindings.zsh" ]; then
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh
   fi
-}
+fi
 
 eval "$(zoxide init --cmd cd zsh)"
 
