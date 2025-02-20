@@ -18,5 +18,7 @@
       '(
 	compile
 	mc/mark-next-lines
+	project-compile
 	slime-compile-defun
+	slime-eval-defun
 	))

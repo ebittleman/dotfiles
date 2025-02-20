@@ -2,11 +2,15 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.renderWhitespace": "all",
   "jupyter.askForKernelRestart": false,
   "jupyter.disableJupyterAutoStart": true,
-  "jupyter.runStartupCommands": ["%load_ext autoreload\n%autoreload 2\n"],
+  "jupyter.runStartupCommands": [
+    "%load_ext autoreload\n%autoreload 2\n"
+  ],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -35,8 +39,10 @@
     "authn",
     "autoflush",
     "autoreload",
+    "azuretools",
     "backends",
     "backoff",
+    "Backpatch",
     "BADDCAFE",
     "Bautista",
     "biotrack",
@@ -53,6 +59,7 @@
     "Cannabiz",
     "CANNALICIOUS",
     "Cblas",
+    "charliermarsh",
     "Chunker",
     "classif",
     "CMPT",
@@ -75,11 +82,15 @@
     "ddtrace",
     "deps",
     "deserializes",
+    "devcontainer",
+    "devcontainers",
     "digifi",
     "digify",
     "distfile",
     "Dockerfiles",
     "dotenv",
+    "dramatiq",
+    "eamodio",
     "endmacro",
     "envvar",
     "esbenp",
@@ -155,12 +166,14 @@
     "mypy",
     "nchz",
     "networkx",
+    "nikobockerman",
     "OIDC",
     "openapi",
     "openid",
     "outerjoin",
     "outp",
     "pandoc",
+    "passthru",
     "patsubst",
     "paymentmethodtype",
     "paymeth",
@@ -199,7 +212,9 @@
     "pytest",
     "pytestmark",
     "pythonjsonlogger",
+    "pythonpath",
     "pytz",
+    "quickbooks",
     "rdbms",
     "readyz",
     "recontextualize",
@@ -214,6 +229,7 @@
     "rowid",
     "rsakey",
     "ruleset",
+    "ryanluker",
     "sbqq",
     "scminput",
     "scopefunc",
@@ -243,6 +259,7 @@
     "subqueryload",
     "subscprod",
     "swappable",
+    "tamasfe",
     "tein",
     "telos",
     "thang",
@@ -278,23 +295,22 @@
     "WYSIWIG"
   ],
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "python.experiments.enabled": false,
-  "python.analysis.autoImportCompletions": true,
   "python.testing.pytestEnabled": true,
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "go.formatTool": "goimports",
   "yaml.customTags": [
@@ -332,7 +348,6 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "aws.profile": "profile:default",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -343,8 +358,10 @@
     "jacoco.xml",
     "coverage.cobertura.xml"
   ],
-
-  "cSpell.enableFiletypes": ["dot", "plantuml"],
+  "cSpell.enableFiletypes": [
+    "dot",
+    "plantuml"
+  ],
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
@@ -361,14 +378,15 @@
     "editor.tabSize": 4,
     "editor.indentSize": "tabSize",
     "editor.formatOnSave": true,
-    "editor.detectIndentation": true
+    "editor.detectIndentation": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "files.associations": {
     ".env": "shellscript"
   },
   "black-formatter.importStrategy": "fromEnvironment",
   "ruff.fixAll": true,
-  "ruff.organizeImports": false,
+  "ruff.organizeImports": true,
   "mypy-type-checker.args": [
     "--no-color-output",
     "--no-error-summary",
@@ -383,6 +401,7 @@
   ],
   "mypy-type-checker.importStrategy": "fromEnvironment",
   "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "application.shellEnvironmentResolutionTimeout": 20,
   "workbench.editor.empty.hint": "hidden",
   "oso.polarLanguageServer.metrics.enabled": "off",
@@ -393,5 +412,16 @@
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "git.openRepositoryInParentFolders": "never",
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.env.osx": {
+    "DYLD_LIBRARY_PATH": "/opt/homebrew/lib"
+  },
+  "python.analysis.autoImportCompletions": true,
+  "editor.formatOnSave": true,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.automationProfile.linux": {
+    "path": "/usr/bin/zsh"
+  }
 }
