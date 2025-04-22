@@ -19,7 +19,7 @@ set -x
 stow -v --target=${HOME} --restow emacs
 stow -v --target=${HOME} --restow p10k
 stow -v --target=${HOME} --restow zsh
-mkdir -p ${CODE_TARGET}/Code/User
+mkdir -p "${CODE_TARGET}/Code/User"
 stow -v --target="${CODE_TARGET}/Code/User" --restow code
 
 if [ -f "$(which code)" ]; then
