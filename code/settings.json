@@ -423,5 +423,6 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.automationProfile.linux": {
     "path": "/usr/bin/zsh"
-  }
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never"
 }

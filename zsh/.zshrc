@@ -81,8 +81,15 @@ bindkey "^X^E" edit-command-line
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
-bindkey  "^[^[[D" backward-word
-bindkey  "^[^[[C" forward-word
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+bindkey "^a" beginning-of-line
+bindkey "^e" end-of-line
+bindkey "^u" backward-kill-line
+bindkey "^y" yank
+
 
 # History
 HISTSIZE=5000
