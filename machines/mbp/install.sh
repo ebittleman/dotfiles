@@ -20,7 +20,7 @@ fi
 brew install --cask ghostty
 brew install --cask firefox
 brew install --cask 1password
-brew install coreutils divvy git git-gui kdiff3 fzf ripgrep stow zoxide pkg-config gnutls libsvg libpng libxpm jpeg librsvg imagemagick webp freetype tree-sitter libgccjit libtiff texinfo
+brew install coreutils divvy git git-gui kdiff3 fzf ripgrep stow zoxide pkg-config gnutls libsvg libpng libxpm jpeg librsvg imagemagick webp freetype tree-sitter libgccjit libtiff texinfo plexamp pyenv
 
 echo "Setup git access now please"
 read
