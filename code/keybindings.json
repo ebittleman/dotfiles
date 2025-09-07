@@ -17,5 +17,13 @@
     {
         "key": "cmd+enter",
         "command": "extension.pgsql.runCurrentStatement"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
     }
 ]

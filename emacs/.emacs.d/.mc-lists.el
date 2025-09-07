@@ -8,6 +8,7 @@
 	cua-paste
 	cua-set-rectangle-mark
 	electric-newline-and-maybe-indent
+	indent-for-tab-command
 	move-text-down
 	move-text-up
 	slime-autodoc-space
@@ -16,8 +17,10 @@
 
 (setq mc/cmds-to-run-once
       '(
+	beginning-of-buffer
 	compile
 	mc/mark-next-lines
+	pixel-scroll-precision
 	project-compile
 	slime-compile-defun
 	slime-eval-defun

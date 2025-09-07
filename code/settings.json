@@ -133,6 +133,7 @@
     "junc",
     "JWKS",
     "JWTs",
+    "kata",
     "KEDA",
     "keepalive",
     "klass",
@@ -379,7 +380,7 @@
     "editor.indentSize": "tabSize",
     "editor.formatOnSave": true,
     "editor.detectIndentation": true,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.associations": {
     ".env": "shellscript"
@@ -424,5 +425,9 @@
   "terminal.integrated.automationProfile.linux": {
     "path": "/usr/bin/zsh"
   },
-  "terminal.integrated.enableMultiLinePasteWarning": "never"
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "docker.extension.enableComposeLanguageServer": false,
+  "workbench.startupEditor": "none",
+  "ocopilot.autocomplete.enable": true,
+  "llama-vscode.enabled": false
 }

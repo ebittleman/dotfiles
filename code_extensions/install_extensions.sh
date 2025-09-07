@@ -2,12 +2,13 @@
 set -e
 cd "$(dirname "$0")"
 
-MISSING=$(comm -13 <(sort extensions.txt) <(code --list-extensions | sort))
+echo $(pwd)
 
-if [ ! -z "${MISSING}" ]; then
-while IFS= read -r p; do
-	echo "code --install-extension ${p}"
-	code --install-extension ${p}
-done <<< ${MISSING}
-fi
+MISSING=$(comm -13 <(code --list-extensions | sort) <(sort extensions.txt))
 
+echo ${MISSING}
+
+for p in $MISSING; do
+  echo "code --force --install-extension $p"
+  code --force --install-extension "$p"
+done
