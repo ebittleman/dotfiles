@@ -401,6 +401,7 @@
     "--show-error-end"
   ],
   "mypy-type-checker.importStrategy": "fromEnvironment",
+  "mypy.runUsingActiveInterpreter": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "application.shellEnvironmentResolutionTimeout": 20,
@@ -429,5 +430,8 @@
   "docker.extension.enableComposeLanguageServer": false,
   "workbench.startupEditor": "none",
   "ocopilot.autocomplete.enable": true,
-  "llama-vscode.enabled": false
+  "llama-vscode.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
