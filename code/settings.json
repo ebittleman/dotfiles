@@ -431,6 +431,7 @@
   "workbench.startupEditor": "none",
   "ocopilot.autocomplete.enable": true,
   "llama-vscode.enabled": false,
+  "llama-vscode.ask_install_llamacpp": false
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
