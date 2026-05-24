@@ -13,9 +13,9 @@ if [ $ret -ne 0 ]; then
 fi
 
 brew install --cask ghostty
-brew install --cask firefox
-brew install --cask 1password
-brew install coreutils divvy git git-gui kdiff3 fzf ripgrep stow zoxide pkg-config gnutls libsvg libpng libxpm jpeg librsvg imagemagick webp freetype tree-sitter libgccjit libtiff texinfo plexamp pyenv automake autoconf
+brew install --cask firefox || true
+brew install --cask 1password || true
+brew install coreutils divvy git git-gui kdiff3 fzf ripgrep stow zoxide pkg-config gnutls libsvg libpng libxpm jpeg librsvg imagemagick webp freetype tree-sitter libgccjit libtiff texinfo plexamp pyenv automake autoconf cmake libtool
 
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh

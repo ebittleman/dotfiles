@@ -163,6 +163,12 @@
     (keymap-set eshell-mode-map "C-r" 'consult-history))
   :hook ((eshell-mode . bedrock/setup-eshell)))
 
+(use-package vterm
+  :ensure t
+  :bind ("C-c t" . vterm)
+  :custom
+  (vterm-always-compile-module t))
+
 ;; Orderless: powerful completion style
 (use-package orderless
   :ensure t

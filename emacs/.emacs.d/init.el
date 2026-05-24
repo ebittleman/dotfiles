@@ -46,7 +46,9 @@
 ;; You can simply uncomment the following if you'd like to get started with
 ;; MELPA packages quickly:
 ;;
- (with-eval-after-load 'package
+(setq package-install-upgrade-built-in t)
+
+(with-eval-after-load 'package
    (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
 
 ;; If you want to turn off the welcome screen, uncomment this
@@ -250,8 +252,7 @@ If the new path's directories does not exist, create them."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(company-c-headers dockerfile-mode company-glsl glsl-mode yasnippet company lsp-mode vscode-icon all-the-icons dired-sidebar pyimport importmagic flycheck markdown-mode move-text multiple-cursors which-key)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -262,6 +263,30 @@ If the new path's directories does not exist, create them."
 (require 'whitespace)
 (keymap-global-set "C-c w" 'whitespace-mode)
 (keymap-global-set "C-c c" 'compile)
+(defun bedrock/smart-home ()
+  "Go to indentation; on repeat, go to visual line start."
+  (interactive)
+  (let ((orig (point)))
+    (back-to-indentation)
+    (when (= orig (point))
+      (beginning-of-visual-line))))
+
+(defun bedrock/jump-down-10 ()
+  "Move point down 10 lines."
+  (interactive)
+  (forward-line 10))
+
+(defun bedrock/jump-up-10 ()
+  "Move point up 10 lines."
+  (interactive)
+  (forward-line -10))
+
+(keymap-global-set "<home>" 'bedrock/smart-home)
+(keymap-global-set "<end>" 'end-of-visual-line)
+(keymap-global-set "C-<home>" 'beginning-of-buffer)
+(keymap-global-set "C-<end>" 'end-of-buffer)
+(keymap-global-set "C-<next>" 'bedrock/jump-down-10)
+(keymap-global-set "C-<prior>" 'bedrock/jump-up-10)
 (global-set-key [M-S-up] 'duplicate-dwim)
 (global-set-key [M-S-down] 'duplicate-dwim)
 

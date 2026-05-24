@@ -9,6 +9,7 @@
 	cua-set-rectangle-mark
 	electric-newline-and-maybe-indent
 	indent-for-tab-command
+	keyboard-escape-quit
 	move-text-down
 	move-text-up
 	slime-autodoc-space
