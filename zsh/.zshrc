@@ -58,7 +58,10 @@ fi
 # zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-fpath+=${HOME}/.cache/zinit/completions
+if [[ -d "${HOME}/.zsh/completions" ]] then
+  fpath+=${HOME}/.zsh/completions
+fi
+
 autoload -Uz compinit && compinit
 
 zinit light Aloxaf/fzf-tab
@@ -128,7 +131,10 @@ else
   fi
 fi
 
-eval "$(zoxide init --cmd cd zsh)"
+
+if [[ "$CLAUDECODE" != "1" ]]; then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
 
 src () {set -a; . $1; set +a}
 export -f src > /dev/null 2>&1

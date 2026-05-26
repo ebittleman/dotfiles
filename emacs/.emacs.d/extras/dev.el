@@ -40,7 +40,8 @@
           (typescript-mode . typescript-ts-mode)
           (json-mode . json-ts-mode)
           (css-mode . css-ts-mode)
-          (python-mode . python-ts-mode)))
+          (python-mode . python-ts-mode)
+          (go-mode . go-ts-mode)))
   :hook
   ;; Auto parenthesis matching
   ((prog-mode . electric-pair-mode)))
@@ -79,6 +80,9 @@
 (use-package python-ts-mode
   :bind (:map python-ts-mode-map
 	      ("M-C-r" . python-shell-send-region)))
+
+(use-package go-mode
+   :ensure t)
 
 ;; Emacs ships with a lot of popular programming language modes. If it's not
 ;; built in, you're almost certain to find a mode for the language you're
@@ -130,7 +134,11 @@
   ;; :hook
   ;; (((python-mode ruby-mode elixir-mode) . eglot))
   :hook
-  (((python-ts-mode) . eglot-ensure))
+  (
+   ((python-ts-mode) . eglot-ensure)
+   ((go-ts-mode) . eglot-ensure)
+   ((go-mode) . eglot-ensure)
+   )
 
   :custom
   (eglot-send-changes-idle-time 0.1)
@@ -143,6 +151,10 @@
 					;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
   (add-to-list 'eglot-server-programs
                '(python-ts-mode . ("pylsp")))
+  (add-to-list 'eglot-server-programs
+               '(go-ts-mode . ("gopls")))
+  (add-to-list 'eglot-server-programs
+               '(go-mode . ("gopls")))
   )
 
 (use-package flycheck

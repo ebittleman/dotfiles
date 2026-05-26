@@ -108,6 +108,7 @@
     "gzipped",
     "hackathon",
     "healthz",
+    "hostnames",
     "httpcore",
     "httpx",
     "hubspot",
@@ -249,6 +250,7 @@
     "simplejwt",
     "simplejwt's",
     "simplexity",
+    "skinparam",
     "Sost",
     "splitio",
     "sqla",
@@ -431,8 +433,24 @@
   "workbench.startupEditor": "none",
   "ocopilot.autocomplete.enable": true,
   "llama-vscode.enabled": false,
-  "llama-vscode.ask_install_llamacpp": false
+  "llama-vscode.ask_install_llamacpp": false,
+  "claudeCode.selectedModel": "opus[1m]",
+  "plantuml.jar": "/Users/ebittleman/opt/plantuml/bin/plantuml-1.2025.10.jar",
+  "claudeCode.preferredLocation": "panel",
+  "chat.disableAIFeatures": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.columnWidth": 2,
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.formatter.indentTables": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
