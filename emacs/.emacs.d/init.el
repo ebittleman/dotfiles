@@ -252,7 +252,13 @@ If the new path's directories does not exist, create them."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(all-the-icons-dired avy cape corfu-terminal dired-sidebar
+			 embark-consult flycheck go-mode json-mode
+			 kind-icon lsp-mode magit marginalia move-text
+			 multiple-cursors nix-mode orderless slime
+			 transient-dwim vertico vscode-icon vterm
+			 wgrep yaml-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
